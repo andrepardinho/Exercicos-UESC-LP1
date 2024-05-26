@@ -1,0 +1,22 @@
+- Iniciar o programa.
+- Declarar e inicializar as variáveis ​​necessárias:
+	- v1 para armazenar o resultado das operações.
+	- var1 e var2 para os valores inseridos pelo usuário.
+	- opt para a opção de operação escolhida pelo usuário.
+- Solicitar ao usuário para inserir o primeiro valor (var1).
+- Ler e armazenar o primeiro valor fornecido pelo usuário.
+- Solicitar ao usuário para inserir o segundo valor (var2).
+- Ler e armazenar o segundo valor fornecido pelo usuário.
+- Solicitar ao usuário para escolher uma operação:
+- Mostrar as opções de operação: adição, subtração, multiplicação e divisão.
+- Ler e armazenar a opção de operação escolhida pelo usuário (opt).
+- Verificar a opção escolhida pelo usuário:
+	Se for 1, realizar a adição (v1 = var1 + var2).
+	Se for 2, realizar a subtração (v1 = var1 - var2).
+	Se for 3, realizar a multiplicação (v1 = var1 * var2).
+	Se for 4, verificar se o segundo valor (var2) é zero:
+		Se sim, exibir uma mensagem de erro indicando divisão por zero e terminar o programa.
+		Se não, realize a divisão (v1 = var1 / var2).
+	Se a opção não for uma das opções válidas (1, 2, 3 ou 4), exiba uma mensagem de erro e termine o programa.
+- Exibir o resultado da operação realizada (v1).
+- Fim do programa

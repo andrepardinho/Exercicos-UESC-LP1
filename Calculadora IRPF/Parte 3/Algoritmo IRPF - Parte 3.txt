@@ -1,0 +1,138 @@
+// ANDRÉ NASCIMENTO PARDINHO
+// 202410507
+
+	// ALGORITMO DA PARTE 1 E 2
+
+
+1 - Inicio do programa
+2 - Inclusão das bibliotecas
+3 - Inicio da função principal (main)
+4 - Definição das variaveis que serão usadas
+5 - Imprimir mensagem de apresentação da calculadora
+6 - Solicitar ao usuário que digite o valor do seu salário bruto e armazena a variável
+    	6.1 - Verifica se o salário é maior ou igual ao mínimo nacional (R$1412) através do laço (do-while):
+	6.1.1 - Se o "salario_bruto < 1412", exibe uma mensagem informando que o salário mínimo em 2024 é R$ 1412 e solicita ao usuário que insira um valor igual ou maior.
+
+7 - Cálculo do imposto de renda inicia:
+
+	7.1 Se o sálario bruto for maior que 0 e menor que 2259.20, o valor do imposto total será igual a 0 e uma mensagem dizendo que o usuário está isento de imposto é exibida. Caso o contrário, e o salario for maior que 2259.20, uma mensagem de isenção também será exibida, pois nessa faixa o usuário não pagará imposto.
+
+	7.2 Se o sálario for maior que 2259.20 (min da faixa), será calculado na variavel "faixa2" o valor a ser taxado. 
+
+	- Então, se o salário for maior que 2826.65 (max faixa), a faixa2 será ser igual a 2826.65(max) menos 2259.20 (min). Caso contrário, a faixa2 será igual ao salário bruto menos 2259.20 (min da faixa.
+ 	- Com a valor a ser taxado definido, é calculado o imposto (imposto_faixa2), que é igual a 7,5% da faixa 2.
+	- Através de uma atribuição com soma, o valor do imposto_faixa2 é somado e atribuido no imposto total (irpf)
+	- Imprimir mensagem com a FAIXA SALARIAL, sua TAXA e o valor do DESCONTO.
+	- Caso contrário, imprimir mensagem de isenção.
+
+    	7.3 Se o salário for maior que 2826.65 (min da faixa 3), será calculado na variável "faixa3" o valor a ser taxado.
+        - Então, se o salário for maior que 3751.05 (max faixa), a faixa3 será igual a 3751.05(max) menos 2826.65 (min). Caso contrário, a faixa3 será igual ao salário bruto menos 2826.65 (min da faixa).
+        - Com o valor a ser taxado definido, é calculado o imposto (imposto_faixa3), que é igual a 15% da faixa 3.
+	- - Através de uma atribuição com soma, o valor do imposto_faixa3 é somado e atribuido no imposto total (irpf)
+        - Imprimir mensagem com a FAIXA SALARIAL, sua TAXA e o valor do DESCONTO.
+        - Caso contrário, imprimir mensagem de isenção.
+
+    	7.4 Se o salário for maior que 3751.05 (min da faixa 4), será calculado na variável "faixa4" o valor a ser taxado.
+        - Então, se o salário for maior que 4664.68 (max faixa), a faixa4 será igual a 4664.68(max) menos 3751.05 (min da faixa). Caso contrário, a faixa4 será igual ao salário bruto menos 3751.05 (min da faixa).
+        - Com o valor a ser taxado definido, é calculado o imposto (imposto_faixa4), que é igual a 22,5% da faixa 4.
+	- - Através de uma atribuição com soma, o valor do imposto_faixa3 é somado e atribuido no imposto total (irpf)
+        - Imprimir mensagem com a FAIXA SALARIAL, sua TAXA e o valor do DESCONTO.
+        - Caso contrário, imprimir mensagem de isenção.
+
+    	7.5 Se o salário for maior que 4664.68 (min da faixa 5), será calculado na variável "faixa5" o valor a ser taxado.
+        - O valor da faixa5 será igual ao salário bruto menos 4664.68 (min da faixa).
+        - Com o valor a ser taxado definido, é calculado o imposto (imposto_faixa5), que é igual a 27,5% da faixa 5.
+	- Através de uma atribuição com soma, o valor do imposto_faixa5 é somado e atribuido no imposto total (irpf)
+        - Imprimir mensagem com FAIXA SALARIAL, sua TAXA e o valor do DESCONTO.
+        - Caso contrário, imprimir mensagem de isenção.
+	
+	7.6 Imprimir mensagem mostrando o imposto total a ser pago (irpf)
+	7.7 Calcular o valor do salário liquido que será o salário bruto menos o valor do irpf
+	7.7.1 Imprimir mensagem mostrando o salário com o irpf descontado.
+
+
+// ALGORITMO DA PARTE 2
+
+8 - Inicio do cálculo de outros descontos e acréscimos
+
+9 - Cálculo do INSS inicia:
+    	9.1 Se o salário bruto for menor ou igual a R$ 1412.00, o valor do INSS será calculado utilizando a alíquota de 7,5%.
+        - O valor do INSS será igual ao salário bruto multiplicado por 0.075.
+            
+    	9.2 Se o salário bruto estiver na faixa entre R$ 1412.01 e R$ 2666.68:
+        - Será calculada a contribuição do INSS considerando duas faixas:
+            - A contribuição da faixa 1 (até R$ 1412.00) utilizando a alíquota de 7,5%
+            - A contribuição da faixa 2 (de R$ 1412.01 a R$ 2666.68) utilizando a alíquota de 9%.
+
+    	9.3 Se o salário bruto estiver na faixa entre R$ 2666.69 e R$ 4000.03:
+        - Será calculada a contribuição do INSS considerando três faixas:
+            - A contribuição da faixa 1 (até R$ 1412.00) utilizando a alíquota de 7,5%.
+            - A contribuiçao da faixa 2 (de R$ 1412.01 a R$ 2666.68) utilizando a alíquota de 9%.
+            - A contribuição da faixa 3 (de R$ 2666.69 a R$ 4000.03) utilizando a alíquota de 12%.
+    
+    	9.4 Se o salário bruto estiver na faixa entre R$ 4000.04 e R$ 7786.02:
+        - Será calculada a contribuição do INSS considerando quatro faixas:
+            - A contribuição da faixa 1 (até R$ 1412.00) utilizando a alíquota de 7,5%.
+            - A contribuição da faixa 2 (de R$ 1412.01 a R$ 2666.68) utilizando a alíquota de 9%.
+            - A contribuição da faixa 3 (de R$ 2666.69 a R$ 4000.03) utilizando a alíquota de 12%.
+            - A contribuição da faixa 4 (de R$ 4000.04 a R$ 7786.02) utilizando a alíquota de 14%.
+    
+    	9.5 Se o salário bruto for maior que R$ 7786.02:
+        - Será calculada a contribuição do INSS considerando todas as faixas.
+            - A contribuição da faixa 1 (até R$ 1412.00) utilizando a alíquota de 7,5%.
+            - A contribuição da faixa 2 (de R$ 1412.01 a R$ 2666.68) utilizando a alíquota de 9%.
+            - A contribuiçao da faixa 3 (de R$ 2666.69 a R$ 4000.03) utilizando a aliquota de 12%.
+            - A contribuição da faixa 4  (de R$ 4000.04 a R$ 7786.02) utilizando a alíquota de 14%.
+
+10 - Solicitar ao usuario que digite o valor de seu vale transporte e armazena na variável "VT".
+	10.1 O desconto máximo do VT é igual a 6% do salario
+	10.1.1 Se o valor do VT for menor que o valor do desconto calculado, então o valor do desconto é igual ao valor do VT. Caso contrário, o valor do desconto é igual a a 6% do salário.
+
+11 - Solicita ao usuário que digite o valor do vale alimentação e armazena na variável "VA"
+
+12 - Solicita ao usuário que digite o valor do seu plano de saúde e armazena na variável "plano_saude"
+
+13 - Resultados são impressos nas tela com a descrição dos descontos e seus valores.
+	- Vale transporte e seu desconto calculado
+	- Vale alimentação e seu desconto calculado (0%)
+	- Vale plano de saúde e seu desconto calculado (20% do total do plano)
+	- INSS seu desconto calculado	
+
+13 - Inicio do calculo de horas extras e atrasos
+	13.1 - Solicitar ao usuáro que digite suas horas semanais e armazenar na variável "hr_semanal"
+	13.2 - Solicitar ao usuáro que digite suas horas extras e armazenar na variável "hr_extra"
+	13.3 - Solicitar ao usuáro que digite suas horas de atraso e armazenar na variável "hr_atraso"
+	13.4 - Salário hora é igual ao salário bruto dividido pelo número de horas mensais
+	13.3.1 - Salário extra é igual ao salario hora + 50% vezes o número de horas
+	13.3.2 - Descontos de atrasos é igual ao salário hora vezes o número de horas de atraso
+	13.5 - Imprimir resultados na tela.
+
+14 - Salário líquido é calculado (Sálário bruto - descontos + acréscimos)
+	14.1 - Imprimir resultado na tela.
+
+
+// ALGORITMO DA PARTE 3
+
+15 - Imprimir mensagem informando ao usuário que será calculado o custo de um funcionário para a empresa.
+
+16 - Imprimrir mensagem pedindo que o usuário digite Enter para continuar.
+
+17 - Calcular o parcela paga pela empresa referente ao vale transporte (parcela da empresa é igual ao valor do vale - a parcela paga pela funcionário.
+
+18 - Calcular os gastos extras da empresa e exibir os gastos extras da empresa:
+	- Fração de férias, 11% do salário bruto
+	- 13º, 8.33% do salário 
+	- Povisão de multa, 4% do salário
+	- Previdenciario, 7,93% do salário
+	- Parcela do vale transporte calculdo
+	- Vale alimentação, valor total
+	- Plano de saúde, 80% do valor do plano
+18.1 - Exibir o total dos gastos extras.
+
+19 - Imprimir custo do funcionário para a empresa (gastos extra + salário bruto)
+
+20 - Imprimir quantos porcento a mais o custo do funcionário representa em comparação ao salário bruto (Gastos extra + salário bruto / salario bruto x 100)
+
+21 - Retorna 0 ao SO
+
+22 - FIM DO PROGRAMA
